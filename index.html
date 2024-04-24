@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Fondo de cielo con cohete</title>
+<title>XF_FER_3</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
 <style>
   body, html {
     margin: 0;
@@ -96,11 +98,16 @@
       -moz-animation: movenave 5s linear infinite;
       -o-animation: movenave 5s linear infinte;
   }
-
-  .nave{
-        background-color: red;
-
+  .cohete {
+    
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-animation: movenave 5s linear infinite;
+      -moz-animation: movenave 5s linear infinite;
+      -o-animation: movenave 5s linear infinte;
   }
+
+
   #luna {
     position: absolute;
     top: 150px;
@@ -112,7 +119,7 @@
     background-size: cover;
     box-shadow: inset 0 0 20px #000,
                 inset -40px -10px 20px rgba(3, 32, 56, 0.7);
-    animation: moon 60s linear infinite;
+    animation: moon 180s linear infinite;
   }
 
 @keyframes moon {
@@ -135,7 +142,7 @@
     background-size: cover;
     box-shadow: inset 0 0 20px #000,
                 inset -40px -10px 20px rgba(3, 32, 56, 0.7);
-    animation: world 60s linear infinite;
+    animation: world 120s linear infinite;
 }
 
 @keyframes world {
@@ -179,15 +186,37 @@
   <div id='stars2'></div>
   <div id='stars3'></div>
 
-  
-  <div id="mundo" ></div>
-
-  <div id="cohete">
-    <div id="fire"></div>
+  <div class="absolute bottom-0 w-full">
+    <div class="relative flex justify-center w-full">
+      <div id="mundo" ></div>
+    </div>
   </div>
- 
-  
+
+
   <div id="luna" ></div>
 
+
+  
+  <div class="absolute top-0 bg-center flex justify-center w-screen items-center overflow-hidden">
+    <div class="w-screen h-screen relative flex justify-center">
+      <div class="h-[506px] absolute -top-36 w-1 ">      
+          <div class="w-full relative h-screen min-w-[626px] md:min-w-[600px] transition-all">           
+              <img src="https://iili.io/JS4Cgls.gif" class="w-full absolute -left-60 md:-left-[305px] top-[285px] md:top-[265px] max-w-[350px] md:max-w-[444px] md:min-w-[300px] max-h-[800px] animate__animated animate__fadeInDownBig animate__delay-0s" >
+              
+               <div class="cohete max-w-14 aspect-[1/4] top-[345px] md:top-[345px]">    
+                  <img src="https://iili.io/Jv4g3Zv.png" class="aspect-[1/4] w-full"/>
+                  <div class="text-white w-[60%] -mt-[4.4%] mx-auto ">
+                    <div class="relative flex w-full">
+                      <img src="https://iili.io/JSrRm6N.gif" class="aspect-[1/2] absolute top-0 -left-[50%] rotate-180" >
+                      <img src="https://iili.io/JSrRm6N.gif" class="aspect-[1/2] absolute top-0 -right-[50%] rotate-180" >
+                      <img src="https://iili.io/JSrRm6N.gif" class="aspect-[1/2] absolute top-0 mx-auto rotate-180" >
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+        </div>
+    </div>   
+  </div>
 </body>
 </html>
